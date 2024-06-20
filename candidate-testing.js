@@ -3,18 +3,12 @@ const input = require('readline-sync');
 // TODO 2: modify your quiz app to ask 5 questions //
 
 // TODO 1.1a: Define candidateName // 
-let candidateName;
+let candidateName = "";
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-const question = `What kind of language is JavaScript? (enter a, b, c or d)
-    a. Dynamic
-    b. Interpreted
-    c. High Level
-    d. All of the Above
-    
-    > `;
-const correctAnswer = "d";
-const correctAnswerResponse = "You are correct.  The answer is d. All of the above.  JavaScript is dynamic, interpreted, and high level.";
-let candidateAnswer;
+const question = "Who was the first American woman in space? ";
+const correctAnswer = "Sally Ride";
+const correctAnswerResponse = "Great work!  Sally Ride was the first American woman in space.";
+let candidateAnswer = "";
 
 
 //TODO: Variables for Part 2
@@ -37,7 +31,7 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   let answer = String(candidateAnswers);
-  if (answer[0].toLowerCase() === correctAnswer) {
+  if (answer.toLowerCase() === correctAnswer.toLowerCase()) {
     console.log(correctAnswerResponse);
   } else {
     console.log("That's not the answer I was looking for.")
