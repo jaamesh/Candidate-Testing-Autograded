@@ -79,7 +79,13 @@ function runProgram() {
   //askQuestion();
   askQuestions();
   //gradeQuiz(candidateAnswer);
-  console.log(`Quiz Grade: ${gradeQuiz(candidateAnswers)}`);
+  let grade = gradeQuiz(candidateAnswers);
+  console.log(`Quiz Grade: ${grade}`);
+  if (grade >= 80) {
+    console.log("This is a passing grade.");
+  } else {
+    console.log("This is not a passing grade, please try again.");
+  }
 }
 
 // ----------- Don't write any code or change any code below this line ---------- //
